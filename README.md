@@ -122,7 +122,7 @@ npx expo start --clear
 Configure `EXPO_PUBLIC_API_URL` no `.env`:
 
 - Emulador Android, API no computador: `http://10.0.2.2:8082`.
-- Aparelho real: # URL DA API QUANDO MEMBRO DO GRUPO SUBIR
+- Aparelho real: (https://app-clyvo-mobile-rm563000.azurewebsites.net/)
 
 O endereço do emulador **não** funciona no celular do avaliador. Em builds Android de distribuição, a configuração da API deve ser preenchida no ambiente EAS de build antes de gerar o APK. Sem uma URL pública válida, os fluxos HTTP não funcionarão no aplicativo publicado.
 

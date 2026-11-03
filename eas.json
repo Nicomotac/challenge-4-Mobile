@@ -1,3 +1,4 @@
+
 {
   "cli": {
     "version": ">= 27.1.0",
@@ -9,7 +10,13 @@
       "distribution": "internal"
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "android": {
+        "buildType": "apk"
+      },
+      "env": {
+        "EXPO_PUBLIC_API_URL": "https://app-clyvo-mobile-rm563000.azurewebsites.net"
+      }
     },
     "production": {
       "autoIncrement": true

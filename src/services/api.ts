@@ -4,6 +4,7 @@ import axios from 'axios';
 export const API_URL = process.env.EXPO_PUBLIC_API_URL?.trim() ||
   (__DEV__ ? 'http://10.0.2.2:8082' : '');
 export const CREDENTIALS_KEY = '@clyvo_credentials';
+console.log('API configurada:', API_URL);
 
 export const api = axios.create({
   baseURL: API_URL || undefined,
