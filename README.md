@@ -16,7 +16,7 @@ O Clyvo PetCare reúne cadastros de tutores e animais, orientações de cuidados
 
 O aplicativo é desenvolvido em **React Native + Expo SDK 54 + TypeScript**, com **React Navigation**, **Axios**, **TanStack Query**, **Yup**, **AsyncStorage** e **expo-notifications**. A autenticação e os cadastros são realizados na API Java Spring Boot do projeto, sem dados fictícios para as operações de CRUD.
 
-**API utilizada:** NO AGUARDO
+**API utilizada:** https://app-clyvo-mobile-rm563000.azurewebsites.net/ | https://github.com/enzovbernard/JavaMobileChallenge
 
 ## Funcionalidades
 
@@ -114,7 +114,6 @@ No terminal, dentro da pasta do aplicativo:
 
 ```cmd
 npm install
-copy .env.example .env
 npm run typecheck
 npx expo start --clear
 ```
@@ -136,13 +135,13 @@ O endereço do emulador **não** funciona no celular do avaliador. Em builds And
 6. Consulte o resultado da triagem no Histórico; reinicie o app e verifique sua persistência.
 7. No Perfil, alterne o modo visual, reinicie e valide a preferência mantida.
 8. Efetue logout; confira a proteção das telas internas.
-9. Instale o APK distribuído e confira versão e hash em **Sobre o App**.
+9. Instale o APK distribuído
 
 ## Geração e distribuição Android
 
 A Sprint 4 solicita a publicação no **Firebase App Distribution** com o e-mail institucional do professor cadastrado como tester. O build de distribuição está configurado no perfil `preview` do `eas.json` para gerar APK.
 
-1. Crie um projeto no Firebase e registre o app Android com o package `com.nicomotac.clyvopetcare`.
+1. Crie um projeto no Firebase e registre o app Android com o package `com.challenge4.clyvopetcare`.
 2. Habilite Firebase App Distribution para o app Android registrado.
 3. Configure no EAS o valor de `EXPO_PUBLIC_API_URL` com o endereço HTTPS do backend. Este valor não é secreto, pois estará presente no pacote do aplicativo.
 4. Faça o commit final do código no repositório oficial da entrega e verifique que a árvore de trabalho está limpa.
