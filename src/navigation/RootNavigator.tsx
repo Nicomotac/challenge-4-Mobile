@@ -15,6 +15,7 @@ import TriagemScreen from '../screen/TriagemScreen';
 import AssistenteIAScreen from '../screen/AssistenteIAScreen';
 import HistoricoScreen from '../screen/HistoricoScreen';
 import PerfilScreen from '../screen/PerfilScreen';
+import SobreAppScreen from '../screen/SobreAppScreen';
 
 const PublicStack = createNativeStackNavigator<PublicStackParamList>();
 const Drawer = createDrawerNavigator<RootDrawerParamList>();
@@ -34,6 +35,8 @@ function PrivateNavigator() {
     <Drawer.Screen name="AssistenteIA" component={AssistenteIAScreen} options={{ title: 'Assistente IA' }} />
     <Drawer.Screen name="Historico" component={HistoricoScreen} options={{ title: 'Histórico' }} />
     <Drawer.Screen name="Perfil" component={PerfilScreen} options={{ title: 'Meu Perfil' }} />
+    <Drawer.Screen name="SobreApp" component={SobreAppScreen} options={{ title: 'Sobre o App' }}/>
+
   </Drawer.Navigator>;
 }
 

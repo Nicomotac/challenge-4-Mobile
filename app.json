@@ -32,7 +32,6 @@
       "expo-notifications"
     ],
     "extra": {
-      "commitHash": "indisponível",
       "eas": {
         "projectId": "956b39e9-d0b6-429a-9a48-eb6af7e64eb2"
       }
