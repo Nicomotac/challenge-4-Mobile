@@ -153,7 +153,7 @@ npx eas-cli build:configure
 npx eas-cli build --platform android --profile preview
 ```
 
-6. Após concluir o build, baixe o APK e instale no aparelho real para testar. Confira o commit da tela **Sobre o App**. `app.config.js` utiliza `EXPO_PUBLIC_COMMIT_HASH`, depois `EAS_BUILD_GIT_COMMIT_HASH`, e por fim o hash do Git local, conforme disponibilidade.
+6. Após concluir o build, baixe o APK e instale no aparelho real para testar. Confira o commit da tela **Sobre o App**. `app.config.js` utiliza `EAS_BUILD_GIT_COMMIT_HASH` quando disponível; caso contrário, tenta obter o hash do Git local e, se não conseguir, informa `indisponível`.
 7. Instale a CLI do Firebase e autentique:
 
 ```cmd
