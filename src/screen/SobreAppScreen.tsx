@@ -60,7 +60,7 @@ export default function SobreAppScreen() {
           <Text>Clyvo PetCare</Text>
 
           <Text style={styles.rotulo}>Versão</Text>
-          <Text>{versao}</Text>w
+          <Text>{versao}</Text>
         </View>
 
         <Text style={styles.rodape}>
