@@ -120,10 +120,10 @@ npx expo start --clear
 
 Configure `EXPO_PUBLIC_API_URL` no `.env`:
 
-- Emulador Android, API no computador: `http://10.0.2.2:8082`.
-- Aparelho real: (https://app-clyvo-mobile-rm563000.azurewebsites.net/)
+- Emulador Android, API no computador (Local): `http://10.0.2.2:8082`.
+- Acesso a API: (https://app-clyvo-mobile-rm563000.azurewebsites.net/)
 
-O endereço do emulador **não** funciona no celular do avaliador. Em builds Android de distribuição, a configuração da API deve ser preenchida no ambiente EAS de build antes de gerar o APK. Sem uma URL pública válida, os fluxos HTTP não funcionarão no aplicativo publicado.
+O endereço do emulador **não** funciona no celular. Em builds Android de distribuição, a configuração da API deve ser preenchida no ambiente EAS de build antes de gerar o APK. Sem uma URL pública válida, os fluxos HTTP não funcionarão no aplicativo publicado.
 
 ### Como testar o fluxo
 
@@ -139,19 +139,16 @@ O endereço do emulador **não** funciona no celular do avaliador. Em builds And
 
 ## Geração e distribuição Android
 
-A Sprint 4 solicita a publicação no **Firebase App Distribution** com o e-mail institucional do professor cadastrado como tester. O build de distribuição está configurado no perfil `preview` do `eas.json` para gerar APK.
-
-1. Crie um projeto no Firebase e registre o app Android com o package `com.challenge4.clyvopetcare`.
-2. Habilite Firebase App Distribution para o app Android registrado.
-3. Configure no EAS o valor de `EXPO_PUBLIC_API_URL` com o endereço HTTPS do backend. Este valor não é secreto, pois estará presente no pacote do aplicativo.
-4. Faça o commit final do código no repositório oficial da entrega e verifique que a árvore de trabalho está limpa.
-5. Execute:
-
+1. Acesse no e-mail o convite do projeto `com.challenge4.clyvopetcare`.
+2. Configure no EAS o valor de `EXPO_PUBLIC_API_URL` com o endereço HTTPS do backend. Este valor não é secreto, pois estará presente no pacote do aplicativo.
+3. Execute:
 ```cmd
 npx eas-cli login
 npx eas-cli build:configure
 npx eas-cli build --platform android --profile preview
 ```
+<<<<<<< HEAD
+=======
 
 6. Após concluir o build, baixe o APK e instale no aparelho real para testar. Confira o commit da tela **Sobre o App**. `app.config.js` utiliza `EAS_BUILD_GIT_COMMIT_HASH` quando disponível; caso contrário, tenta obter o hash do Git local e, se não conseguir, informa `indisponível`.
 7. Instale a CLI do Firebase e autentique:
@@ -169,15 +166,11 @@ firebase appdistribution:distribute caminho\clyvo.apk --app ID_DO_APLICATIVO_FIR
 
 9. Confirme no painel Firebase que o professor foi convidado e consegue instalar a versão correta. O mesmo commit deve estar representado no código entregue, no APK e no vídeo.
 
+>>>>>>> 56b782600a90cfbd09d02b3a71dea5b6c0089c0b
 Documentação: [Expo EAS Build](https://docs.expo.dev/build/introduction/) · [Firebase App Distribution](https://firebase.google.com/docs/app-distribution/android/distribute-cli?hl=pt-br)
 
 ## Vídeo de apresentação
 
-O vídeo final deve registrar, no aplicativo realmente instalado e disponibilizado ao professor, os fluxos completos de login, tutores, pets, triagem, notificação, histórico, tema e a tela **Sobre o App**. Demonstrar o app sem cortes que ocultem erros e confirmar a versão distribuída. As funcionalidades não demonstradas podem não ser consideradas na correção.
 
-**Link do vídeo de entrega:** ###########################################
-
-**Disponibilização ao professor:** #########################################
-
-## Verificação
+**Link do vídeo de entrega:** https://youtu.be/YgySIogkwsA
 
