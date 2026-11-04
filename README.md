@@ -142,12 +142,12 @@ O endereço do emulador **não** funciona no celular. Em builds Android de distr
 1. Acesse no e-mail o convite do projeto `com.challenge4.clyvopetcare`.
 2. Configure no EAS o valor de `EXPO_PUBLIC_API_URL` com o endereço HTTPS do backend. Este valor não é secreto, pois estará presente no pacote do aplicativo.
 3. Execute:
-```cmd
+```
+cmd
 npx eas-cli login
 npx eas-cli build:configure
 npx eas-cli build --platform android --profile preview
 ```
-<<<<<<< HEAD
 =======
 
 6. Após concluir o build, baixe o APK e instale no aparelho real para testar. Confira o commit da tela **Sobre o App**. `app.config.js` utiliza `EAS_BUILD_GIT_COMMIT_HASH` quando disponível; caso contrário, tenta obter o hash do Git local e, se não conseguir, informa `indisponível`.
